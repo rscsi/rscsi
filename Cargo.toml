@@ -1,0 +1,90 @@
+[workspace]
+resolver = "3"
+members = [
+  "core",
+  "multipath",
+  "rscsi",
+  "sbc",
+  "spc",
+  "transport",
+  "transport-iscsi",
+  "util",
+]
+
+[workspace.package]
+version = "0.0.1"
+edition = "2024"
+repository = "https://github.com/rscsi/rscsi"
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+rscsi = { path = "rscsi", version = "0.0.1" }
+rscsi-core = { path = "core", version = "0.0.1" }
+rscsi-multipath = { path = "multipath", version = "0.0.1" }
+rscsi-sbc = { path = "sbc", version = "0.0.1" }
+rscsi-spc = { path = "spc", version = "0.0.1" }
+rscsi-transport = { path = "transport", version = "0.0.1" }
+rscsi-transport-iscsi = { path = "transport-iscsi", version = "0.0.1" }
+rscsi-util = { path = "util", version = "0.0.1" }
+
+[workspace.lints.clippy]
+cloned_instead_of_copied = "warn"
+complexity = { level = "warn", priority = -1 }
+correctness = { level = "deny", priority = -1 }
+expect_used = "warn"
+implicit_clone = "warn"
+large_futures = "warn"
+map_flatten = "warn"
+map_unwrap_or = "warn"
+perf = { level = "warn", priority = -1 }
+redundant_type_annotations = "warn"
+style = { level = "warn", priority = -1 }
+suspicious = { level = "warn", priority = -1 }
+unused_async = "warn"
+unwrap_used = "warn"
+use_self = "warn"
+
+allow_attributes_without_reason = "warn"
+as_pointer_underscore = "warn"
+assertions_on_result_states = "warn"
+# clone_on_ref_ptr = "warn"
+deref_by_slicing = "warn"
+disallowed_script_idents = "warn"
+empty_drop = "warn"
+empty_enum_variants_with_brackets = "warn"
+empty_structs_with_brackets = "warn"
+fn_to_numeric_cast_any = "warn"
+if_then_some_else_none = "warn"
+renamed_function_params = "warn"
+semicolon_outside_block = "warn"
+undocumented_unsafe_blocks = "warn"
+unnecessary_safety_comment = "warn"
+unnecessary_safety_doc = "warn"
+unneeded_field_pattern = "warn"
+unused_result_ok = "warn"
+# map_err_ignore = "warn"
+# too_long_first_doc_paragraph = "warn"
+
+[workspace.lints.rust]
+# unsafe_code = "deny"
+# warnings = "deny"
+ambiguous_negative_literals = "warn"
+deprecated_in_future = "warn"
+future_incompatible = "warn"
+missing_debug_implementations = "warn"
+# non_exhaustive_omitted_patterns = "warn"
+noop_method_call = "warn"
+redundant_imports = "warn"
+redundant_lifetimes = "warn"
+rust_2018_compatibility = "warn"
+rust_2018_idioms = "warn"
+rust_2021_compatibility = "warn"
+rust_2024_compatibility = "warn"
+trivial_casts = "warn"
+trivial_numeric_casts = "warn"
+unreachable_pub = "warn"
+unsafe_op_in_unsafe_fn = "warn"
+unused = "warn"
+# unused_crate_dependencies = "warn"
+unused_lifetimes = "warn"
+unused_qualifications = "warn"

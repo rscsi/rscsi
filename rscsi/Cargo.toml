@@ -1,0 +1,20 @@
+[package]
+name = "rscsi"
+description = "rscsi - Rust SCSI framework"
+
+version.workspace = true
+edition.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+rscsi-core.workspace = true
+rscsi-multipath.workspace = true
+rscsi-sbc.workspace = true
+rscsi-spc.workspace = true
+rscsi-transport.workspace = true
+rscsi-transport-iscsi.workspace = true
+rscsi-util.workspace = true
+
+[lints]
+workspace = true
